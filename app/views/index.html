@@ -1,0 +1,70 @@
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>GuestBook</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+  <script defer src='/js/main.js'></script>
+</head>
+<body>
+<main class='main'>
+  <style>
+      html,
+      body {
+          padding: 0;
+          margin: 0 0 80px;
+      }
+
+      .textarea {
+          resize: vertical;
+          max-height: 100px;
+      }
+  </style>
+
+  <section class='guestbook py-5'>
+    <h1 class='text-center'>GuestBook</h1>
+
+    <div class='container py-5'>
+      <div class='row d-flex flex-column justify-content-center align-items-center'>
+        <div class='comments col col-sm-10 col-md-8'>
+          <!-- Comments (count) -->
+          <h4 class='comments__title px-4 py-3 mb-4 rounded text-center bg-dark text-light'>
+            Comments: <span class='comments__count'>0</span>
+          </h4>
+
+          <!-- Comments goes here -->
+        </div>
+      </div>
+    </div>
+
+    <div class='container fixed-bottom'>
+      <div class='form-row row d-flex flex-column justify-content-center align-items-center'>
+        <div class='col col-sm-10 col-md-8'>
+
+          <!-- Post comment -->
+          <form class='form shadow-lg'>
+            <div class='bg-dark px-3 py-4 rounded'>
+              <!-- Author's name -->
+              <div class='form-group'>
+                <input class='form__input-name form-control' type='text' placeholder='Name' name='username'>
+              </div>
+
+              <!-- Comment -->
+              <div class='form-group'>
+                <textarea class='form__input-comment form-control textarea' placeholder='Write your comment here' name='comment'></textarea>
+              </div>
+
+              <!-- Submit btn -->
+              <div class='text-right'>
+                <button class='form__submit btn btn-secondary btn-sm' disabled>Post comment</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
